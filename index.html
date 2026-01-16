@@ -82,6 +82,31 @@
             animation: rainbow_animation 6s ease-in-out infinite; /* Apply the animation */
             background-size: 400% 100%; /* Make the background wider than the text */
         }
+    .audio-wrapper {
+        width: 100%;
+        margin: 24px 0;
+        padding: 0;
+        display: block;
+    }
+
+    /* O truque é FORÇAR display:block e altura mínima adequada */
+    .audio-wrapper audio {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+
+        /* iOS exige altura mínima real do player */
+        height: 54px !important;
+        min-height: 54px !important;
+
+        /* resetar qualquer interferência do container */
+        font-size: initial !important;
+        line-height: normal !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
 
         @keyframes rainbow_animation {
             0%, 100% {
@@ -132,16 +157,16 @@
 
 <main>
     <p>
-        Eu me chamo Eduardo, sou do interior do Pará, especificamente de Breves, Marajó.
+        Eu me chamo Eduardo, sou do interior do Pará, especificamente de Breves, Marajó (Sim, já fui molestado).
         Apesar de todas as dificuldades, tive apoio dos meus pais que confiaram em mim.
-        Através de muito esforço e estudo consegui uma bolsa no Ari, que abriu as portas
-        para mim e me guiou até meu objetivo.
+        Através de muito esforço e estudo consegui uma bolsa no Ari (Ia só no almoço, às vezes), que abriu as portas
+        para mim e me guiou até meu objetivo (Ir para a USP 🚀).
 
         <br><br>
 
         Hoje, reprovado na terceira fase do vestibular de forma injusta, busco justiça
         pelo ocorrido. A arrecadação será usada para ajudar pessoas ainda mais
-        fragilizadas economicamente e, caso possível, no processo judicial.
+        fragilizadas economicamente (eu) e, caso possível, no processo judicial (Clash Royale).
 
         <br><br>
 
@@ -149,8 +174,18 @@
         💜 <a href="https://www.vakinha.com.br/vaquinha/ajuda-para-matricula-no-ita" target="_blank">
             Link da Vakinha
         </a>
+        <br><br>
+        Transcrição de áudio para todes:
     </p>
+        <div class="audio-wrapper">
+            <audio controls preload="metadata">
+                <source src="./media/Som de Indio - Meninozinho Manso (youtube).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
+        <br><br>
+        <br><br>
     <div class="images">
         <img src="https://preview.redd.it/lembra-de-ter-visto-ele-pela-primeira-vez-no-orkut-v0-5yqwdwjnrw2g1.jpg?width=533&format=pjpg&auto=webp&s=31c74e3368848717d41d546ac0411ca477d0678d" />
         <img src="https://static.vakinha.com.br/uploads/vakinha/image/5899406/1768496020.803.jpg" />
