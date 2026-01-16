@@ -74,35 +74,39 @@
     }
 
     /* ===== DESKTOP / TABLET ===== */
-    @media (min-width: 768px) {
-        header h1 {
-            font-size: 28px;
+ /* Ajustes específicos para celular */
+    @media (max-width: 768px) {
+        main {
+            margin: 20px;
+            padding: 20px;
         }
 
-        main {
-            margin: 50px auto;
-            padding: 30px;
+        header {
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 20px;
         }
 
         p {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .images {
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
         }
 
         .images img {
-            height: 200px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .images img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(208, 102, 255, 1);
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.2);
         }
     }
+
 
     </style>
 </head>
