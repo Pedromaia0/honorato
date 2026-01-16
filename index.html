@@ -74,6 +74,24 @@
             color: #c9a3ff;
             font-size: 14px;
         }
+        .animated-rainbow {
+            background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow_animation 6s ease-in-out infinite; /* Apply the animation */
+            background-size: 400% 100%; /* Make the background wider than the text */
+            font-size: 32px;
+        }
+
+        @keyframes rainbow_animation {
+            0%, 100% {
+                background-position: 0 0; /* Start position */
+            }
+            50% {
+                background-position: 100% 0; /* End position, creates the moving effect */
+            }
+        }        
 
         /* ===== MOBILE ===== */
         @media (max-width: 1200px) {
@@ -110,7 +128,7 @@
 <body>
 
 <header>
-    <h1>Ajude esse Índio Emo Bombado Asiático e Gay a Ingressar no ITA</h1>
+    <h1>Ajude esse Índio Emo <s>Bombado</s> Asiático e <span class="animated-rainbow">Gay</span> a Ingressar no ITA</h1>
 </header>
 
 <main>
